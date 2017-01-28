@@ -73,7 +73,7 @@ if (!(APP_SECRET && VALIDATION_TOKEN && PAGE_ACCESS_TOKEN && SERVER_URL)) {
 // });
 
 app.get('/webhook/', function (req, res) { 
-  console.log('f')
+  
   if (req.query['hub.verify_token'] === 'my_voice_is_my_password_verify_me') {
     res.send(req.query['hub.challenge'])
   } else {
